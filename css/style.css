@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/*----------*----------*/
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/*----------*----------*/
+@font-face {
+  font-family: "Antikvarika";
+  src: url("../fonts/Antikvarika.eot");
+  src: url("../fonts/Antikvarika.eot?#iefix") format("embedded-opentype"), url("../fonts/Antikvarika.woff2") format("woff2"), url("../fonts/Antikvarika.woff") format("woff"), url("../fonts/Antikvarika.ttf") format("truetype"), url("../fonts/Antikvarika.svg#Antikvarika") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------*----------*/
+/*
+%Зеленый
+$main-color: #a1c68f;
+$title-color: #6b8d27;
+%Красный
+$main-color: #dfae9f;
+$title-color: #df4419;
+%Оранжевый
+$main-color: #e8c696;
+$title-color: #df8d19;
+%Синий
+$main-color: #9ac6df;
+$title-color: #199adf;
+*/
+.column__image img, .header__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*----------*----------*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #a1c68f;
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 30px 25px 70px;
+  background: #30250f;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*----------*----------*/
+.title {
+  color: #6b8d27;
+  font-family: "Antikvarika";
+  font-size: 32px;
+  text-align: center;
+}
+
+@keyframes arrow {
+  0% {
+    top: 87%;
+  }
+  100% {
+    top: 89%;
+  }
+}
+.header {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #30250f;
+}
+.header__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  z-index: 5;
+  font-size: 106px;
+  white-space: nowrap;
+  text-shadow: 40px -40px 45px #30250f, -40px -40px 45px #30250f, 40px 40px 45px #30250f, -40px 40px 45px #30250f, 5px 2px 5px #000000;
+}
+.header__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.2;
+}
+.header__icon {
+  max-width: 65px;
+  max-height: 65px;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: arrow 1s linear infinite alternate;
+  cursor: pointer;
+}
+.header__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*----------*----------*/
+.headline__body {
+  padding: 25px 15px;
+  background: #231a09;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.headline__menu {
+  display: flex;
+  justify-content: center;
+}
+.headline__item {
+  font-size: 17px;
+  margin: 0 15px;
+  color: #a1c68f;
+  transition: all 0.2s linear 0s;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5411764706);
+}
+.headline__item:hover {
+  color: #6b8d27;
+}
+.headline__item_active {
+  color: #6b8d27;
+}
+
+.row {
+  display: flex;
+  margin: 0 -10px;
+}
+.row__column {
+  flex: 0 0 33.333%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.column__ava {
+  max-width: 250px;
+  max-height: 250px;
+  margin-bottom: 25px;
+  align-self: center;
+}
+.column__ava img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.column__image {
+  position: relative;
+  padding-top: 170%;
+}
+.column__title {
+  text-shadow: 2px 1.5px 4px #000;
+}
+.column__text {
+  font-size: 15px;
+  flex: 1 1 auto;
+  text-align: justify;
+  padding: 17px 15px 30px;
+  line-height: 20px;
+}
+
+/*----------*----------*/
+.footer {
+  padding: 25px 25px;
+  background: #30250f;
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__text {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5411764706);
+  color: #6b8d27;
+  margin-right: 25px;
+}
+.footer__link {
+  border-radius: 5px;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 40px;
+  max-height: 40px;
+}
+.footer__link img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}

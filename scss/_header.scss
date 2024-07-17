@@ -1,0 +1,55 @@
+@keyframes arrow {
+    0% {
+        top: 87%;
+    }
+    100% {
+        top: 89%;
+    }
+}
+
+.header {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: $bg-color;
+
+	&__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+        z-index: 5;
+		font-size: 106px;
+        white-space: nowrap;
+		text-shadow: 40px -40px 45px $bg-color, -40px -40px 45px $bg-color, 
+        40px 40px 45px $bg-color, -40px 40px 45px $bg-color, 5px 2px 5px #000000;
+	}
+
+	&__bg {
+        @extend %adaptiveImage;
+
+		img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+        }
+	}
+    
+    &__icon {
+        max-width: 65px;
+        max-height: 65px;
+        position: absolute;
+        top: 87%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: arrow 1s linear infinite alternate;
+        cursor: pointer;
+        
+		img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+	}
+}
